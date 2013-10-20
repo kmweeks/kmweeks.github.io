@@ -203,20 +203,6 @@ nav {
   }
 }
 
-.previous,
-.next {
-  font-size: 1.5em;
-  padding: 1em .625em 0;
-}
-
-.previous {
-  float: left;
-}
-
-.next {
-  float: right;
-}
-
 /* -- Light to dark -- */
 .light-to-dark {
   color: lighten($body-font-color, 60%);

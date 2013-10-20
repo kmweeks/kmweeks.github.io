@@ -466,7 +466,7 @@ p {
   font-size: 1.3em;
   font-weight: 300;
   line-height: 1.6;
-  margin-bottom: 0.75em;
+  margin-bottom: 1em;
   margin-top: 0; }
 
 /* Frame */
@@ -523,6 +523,21 @@ p {
   overflow: hidden;
   margin-bottom: 2.1em;
   padding: 1em 0.8em; }
+
+/* Previous/Next */
+.previous,
+.next {
+  font-size: 1.5em;
+  margin-bottom: 2.5em;
+  padding: 1em .625em 0; }
+
+.previous {
+  float: left;
+  padding-left: 0; }
+
+.next {
+  float: right;
+  padding-right: 0; }
 
 html {
   background: url(../img/bg.png); }
@@ -660,17 +675,6 @@ nav {
   max-width: 600px; }
   .image-credits p {
     font-size: .75em; }
-
-.previous,
-.next {
-  font-size: 1.5em;
-  padding: 1em .625em 0; }
-
-.previous {
-  float: left; }
-
-.next {
-  float: right; }
 
 /* -- Light to dark -- */
 .light-to-dark {

@@ -13,5 +13,27 @@
     {{ content }}
   </section>
 </article>
+<section>
+  {% for post in site.categories.blog %}
+    {% if post.url == page.url %}
+      {% assign post_index0 = forloop.index0 %}
+      {% assign post_index1 = forloop.index %}
+    {% endif %}
+  {% endfor %}
+  {% for post in site.categories.blog %}
+    {% if post_index1 == forloop.index0 %}
+      {% assign prev_post = post.url %}
+    {% endif %}
+    {% if post_index0 == forloop.index %}
+      {% assign next_post = post.url %}
+    {% endif %}
+  {% endfor %}
+  {% if prev_post %}
+    <a class="previous" href="{{ prev_post }}">&larr; Previous</a>
+  {% endif %}
+  {% if next_post %}
+    <a class="next" href="{{ next_post }}">Next &rarr;</a>
+  {% endif %}
+</section>
 
 {% include footer.html %}

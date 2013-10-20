@@ -74,3 +74,21 @@
   margin-bottom: 2.1em;
   padding: 1em 0.8em;
 }
+
+/* Previous/Next */
+.previous,
+.next {
+  font-size: 1.5em;
+  margin-bottom: 2.5em;
+  padding: 1em .625em 0;
+}
+
+.previous {
+  float: left;
+  padding-left: 0;
+}
+
+.next {
+  float: right;
+  padding-right: 0;
+}

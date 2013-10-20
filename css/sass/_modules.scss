@@ -1,0 +1,76 @@
+/* Frame */
+.frame {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 5px;
+  display: block;
+  margin-bottom: .5em;
+  padding: .5em;
+  transition: opacity 0.2s ease-in-out;
+
+  img {
+    display: block;
+  }
+}
+
+/* Portrait */
+.portrait {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+
+  @media screen and (min-width: $break-medium) {
+    max-width: 100%;
+  }
+}
+
+/* Work Excerpt */
+.work-excerpt {
+  h6 {
+    color: #888;
+    text-align: center;
+  }
+}
+
+/* Post Date */
+.date {
+  color: lighten($body-font-color, 20%);
+}
+
+/* Blog Post List */
+.blog-post-list {
+
+  ul {
+    margin-top: 3em;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: 3em;
+  }
+
+  h2 {
+    margin-bottom: .25em;
+  }
+}
+
+/* Blog Post */
+.blog-post {
+
+  h5 {
+    margin-bottom: 1.5em;
+  }
+}
+
+/* Code Snippets */
+.highlight pre {
+  background: rgba(#fbfbfb, 0.1);
+  border: 1px solid #d8d8d8;
+  border-radius: 0.4em;
+  color: lighten($body-font-color, 10%);
+  overflow: hidden;
+  margin-bottom: 2.1em;
+  padding: 1em 0.8em;
+}

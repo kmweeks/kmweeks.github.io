@@ -1,0 +1,97 @@
+body {
+  margin: 0 auto;
+  max-width: 75em;
+  width: 95%;
+}
+
+.block-grid {
+  @extend .clearfix;
+
+  & > article {
+    float: left;
+
+    @include respond-to(small) {
+      padding: 0 ($block-grid-gutter / 1.5) 1.25em;
+      width: 50%;
+
+      &:nth-child(2n-1) /* 1, 3, 5... */ {
+        padding-left: 0;
+      }
+
+      &:nth-child(2n) /* 2, 4, 6... */ {
+        padding-left: $block-grid-gutter / 1.5;
+        padding-right: 0;
+      }
+    }
+
+    @include respond-to(large) {
+      padding-left: $block-grid-gutter;
+      padding-right: $block-grid-gutter;
+      width: 33.3333%;
+
+      &:nth-child(2n-1) {
+        padding-left: $block-grid-gutter;
+      }
+
+      &:nth-child(2n) {
+        padding-right: $block-grid-gutter;
+      }
+
+      &:nth-child(3n+1) /* 1, 4, 7... */ {
+        padding-left: 0;
+      }
+
+      &:nth-child(3n+2) /* 2, 5, 8... */ {
+        padding-left: $block-grid-gutter / 2;
+        padding-right: $block-grid-gutter / 2;
+      }
+
+      &:nth-child(3n) /* 3, 6, 9... */ {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+/* Column Grid */
+.columns {
+  @extend .clearfix;
+}
+
+@include respond-to(medium) {
+  .columns {
+    margin: 0;
+  }
+
+  [class*='column-'] {
+    float: left;
+    padding-right: $column-gutter / 2;
+
+    &:last-of-type {
+      padding-left: $column-gutter / 2;
+      padding-right: 0;
+    }
+  }
+  .column-2-3 {
+    width: 66.66%;
+  }
+  .column-1-3 {
+    width: 33.33%;
+  }
+  .column-1-2 {
+    width: 50%;
+  }
+  .column-1-4 {
+    width: 25%;
+  }
+
+  /* Opt-in outside padding */
+  .grid-pad {
+    padding: $column-gutter 0 $column-gutter $column-gutter;
+    [class*='column-']:last-of-type {
+      padding-right: $column-gutter;
+    }
+  }
+}
+
+

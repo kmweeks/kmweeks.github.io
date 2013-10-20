@@ -1,0 +1,27 @@
+.under-construction {
+  background: url(../img/under-construction-imac.png) no-repeat;
+  height: 255px;
+  padding: 12px 12px 112px;
+  position: relative;
+  width: 284px;
+
+  .glare {
+    background: url(../img/under-construction-glare.png) no-repeat;
+    display: block;
+    height: 179px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 153px;
+  }
+
+  .code {
+    background: url(../img/under-construction-code.gif) no-repeat;
+    height: 155px;
+    width: 260px;
+  }
+
+}
+
+
+

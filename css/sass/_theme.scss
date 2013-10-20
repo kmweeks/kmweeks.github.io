@@ -1,0 +1,254 @@
+html {
+  background: url(../img/bg.png);
+}
+
+body {
+  padding-bottom: 3em;
+}
+
+/* -- Typography -- */
+a {
+  color: $primary-color;
+}
+
+
+/* -- Header -- */
+header {
+  overflow: hidden;
+  padding-bottom: 1.5em;
+  position: relative;
+}
+
+.site-logo {
+  display: block;
+  margin: 1em auto;
+  width: 5em;
+
+  @media screen and (min-width: $break-medium + 1em) {
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* -- Main Navigation -- */
+.menu {
+  color: lighten(#000, 70%);
+  cursor: pointer;
+  font-size: 1.2em;
+  position: absolute;
+  top: 2.5em;
+  right: 1em;
+
+  &:hover {
+    color: lighten(black, 10%);
+  }
+
+  @media screen and (min-width: $break-medium + 1em) {
+    display: none;
+  }
+}
+
+nav {
+  display: none;
+  font-size: 1.2em;
+  overflow: hidden;
+  text-align: center;
+
+  div {
+    display: inline-block;
+  }
+
+  a {
+    color: lighten(black, 20%);
+    display: inline-block;
+    padding: .65em 1.5em;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten(black, 60%);
+    }
+  }
+
+}
+
+@media screen and (min-width: $break-medium + 1em) {
+  nav {
+    display: block;
+    float: right;
+
+    a {
+      border-bottom: .1875em solid transparent;
+      display: block;
+      padding: 2.2em 1.25em 1em;
+
+      &:hover {
+        border-bottom: .1875em solid $primary-color;
+        color: lighten(black, 20%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-medium + 1em) {
+  nav {
+    display: block;
+    float: right;
+
+    a {
+      border-bottom: .1875em solid transparent;
+      display: block;
+      padding: 2.2em 1.5em 1em;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: .1875em solid $primary-color;
+        color: lighten(black, 20%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break-medium + 5em) {
+  nav {
+    a {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+}
+
+/* -- Intro -- */
+.intro .column,
+.intro .columns {
+  margin-bottom: 3em;
+}
+
+/* -- Single Work Item -- */
+.single-work-item {
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.project-type {
+  font-size: 1.2em;
+  letter-spacing: .15em;
+  margin-bottom: 1.2em;
+  text-transform: uppercase;
+}
+
+.description {
+  @media screen and (max-width: 45em) {
+    .large-6 {
+      float: none;
+      width: auto;
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+        width: 100%;
+      }
+    }
+  }
+
+  img {
+    margin-bottom: 1.875em;
+  }
+
+  h3 {
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+}
+
+.device {
+  margin-top: 3em;
+
+  p {
+    @extend .center;
+    max-width: 500px;
+
+  }
+}
+
+.iphone img {
+  margin-bottom: 2em;
+}
+
+.macbook img {
+  margin-bottom: 1em;
+}
+
+.magazine-spread {
+  margin-top: 2em;
+
+  img {
+    margin-bottom: 1em;
+  }
+}
+
+.image-credits {
+  margin: 0 auto;
+  max-width: 600px;
+
+  p {
+    font-size: .75em;
+  }
+}
+
+.previous,
+.next {
+  font-size: 1.5em;
+  padding: 1em .625em 0;
+}
+
+.previous {
+  float: left;
+}
+
+.next {
+  float: right;
+}
+
+/* -- Light to dark -- */
+.light-to-dark {
+  color: lighten($body-font-color, 60%);
+
+  + span {
+    color: lighten($body-font-color, 40%);
+
+    + span {
+      color: lighten($body-font-color, 10%);
+    }
+  }
+}
+
+/* -- Contact -- */
+.contact {
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 36em) {
+  .contact h3 {
+    text-align: center;
+  }
+}
+
+/* -- Classes -- */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  img.center {
+    display: block;
+  }

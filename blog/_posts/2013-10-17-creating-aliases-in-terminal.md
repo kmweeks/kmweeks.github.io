@@ -25,7 +25,7 @@ Add your alias by typing:
 alias myproject='cd ~/path/to/myproject'
 {% endhighlight %}
 
-So we've added an alias to .bash_profile, but we can't use it until we refresh the file. In Terminal, type
+Exit with control+x, then Y, then return. Now you've added an alias to .bash_profile, but we can't use it until we refresh the file. In Terminal, type
 
 {% highlight bash %}
 source .bash_profile

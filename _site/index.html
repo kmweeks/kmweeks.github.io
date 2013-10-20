@@ -1,123 +1,99 @@
-
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Kevin Weeks | Web Designer</title>
+  <title>Work | Kevin Weeks | Designer and Front-End Developer</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="/css/main.css">
 
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <script src="/js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
   <header class="row">
-    <div class="site-logo">
-      <img src="img/logo.png" alt="KW Logo">
-    </div>
+    <a href="/" class="site-logo">
+      <img src="/img/logo.png" alt="KW Logo">
+    </a>
     <a class="menu">Menu</a>
     <nav>
-      <div name="work"><a href="index.html">Work</a></div>
-      <div name="about"><a href="about.html">About</a></div>
-      <div name="contact"><a href="contact.html">Contact</a></div>
+      <div name="work"><a href="/index.html">Work</a></div>
+      <div name="blog"><a href="/blog/index.html">Blog</a></div>
+      <div name="about"><a href="/about.html">About</a></div>
+      <div name="contact"><a href="/contact.html">Contact</a></div>
     </nav>
   </header>
 
-  <!-- Main Content -->
-	<div class="row intro">
-		<div class="large-12 columns">
-			<h1>Hi there. My name is Kevin. I'm a web designer and front-end developer.</h1>
-			<h2>You can see my work below.</h2>
-		</div>
-	</div>
+  <section class="intro">
+    <h1>Hi there. My name is Kevin. I'm a web designer and front-end developer.</h1>
+    <h2>You can see my work below.</h2>
+  </section>
 
-	<div class="row">
-		<div class="large-12 columns">
-			<ul class="work-grid">
-        <li>
-          <a href="work/whats-my-charity.html">
-            <img src="img/whats-my-charity-screen.jpg">
-          </a>
-          <h6>What's My Charity App</h6>
-        </li>
-        <li>
-          <a href="work/top-that.html">
-            <img src="img/top-that-screen.jpg">
-          </a>
-          <h6>Top That for iPhone</h6>
-        </li>
-        <li>
-          <a href="work/pace-calculator.html">
-            <img src="img/pace-calculator-screen.jpg">
-          </a>
-          <h6>Triathlon Pace Calculator</h6>
-        </li>
-        <li>
-          <a href="work/around-the-cycle.html">
-            <img src="img/around-the-cycle-screen.jpg">
-          </a>
-          <h6>Around the Cycle</h6>
-        </li>
-        <li>
-          <a href="work/under-construction.html">
-            <img src="img/under-construction-screen.jpg">
-          </a>
-          <h6>Under Construction Page</h6>
-        </li>
-        <li>
-          <a href="work/effect-magazine.html">
-            <img src="img/effect-magazine-screen.jpg">
-          </a>
-          <h6>Effect Magazine</h6>
-        </li>
-        <li>
-          <a href="work/integration-bee.html">
-            <img src="img/integration-bee-screen.jpg">
-          </a>
-          <h6>Integration Bee Logo</h6>
-        </li>
-      </ul>
-			</div>
-	</div>
+  <section class="block-grid">
 
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+      <article class="work-excerpt">
+        <a href="/work/2013/08/10/top-that.html" class="frame">
+          <img src="/img/top-that-screen.jpg">
+        </a>
+        <h6>Top That!</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2013/06/29/around-the-cycle.html" class="frame">
+          <img src="/img/around-the-cycle-screen.jpg">
+        </a>
+        <h6>Around the Cycle</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2013/04/29/integration-bee.html" class="frame">
+          <img src="/img/integration-bee-screen.jpg">
+        </a>
+        <h6>Integration Bee Logo</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2012/11/12/whats-my-charity.html" class="frame">
+          <img src="/img/whats-my-charity-screen.jpg">
+        </a>
+        <h6>What's My Charity?</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2012/05/12/effect-magazine.html" class="frame">
+          <img src="/img/effect-magazine-screen.jpg">
+        </a>
+        <h6>Effect Magazine</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2011/11/14/pace-calculator.html" class="frame">
+          <img src="/img/pace-calculator-screen.jpg">
+        </a>
+        <h6>Triathlon Pace Calculator</h6>
+      </article>
+
+      <article class="work-excerpt">
+        <a href="/work/2011/10/29/under-construction.html" class="frame">
+          <img src="/img/under-construction-screen.jpg">
+        </a>
+        <h6>Under Construction Page</h6>
+      </article>
+
+  </section>
+
+<script>
+document.write('<script src=' +
+  ('__proto__' in {} ? '/js/vendor/zepto' : '/js/vendor/jquery') +
   '.js><\/script>')
-  </script>
+</script>
 
-  <!--
-  <script src="javascripts/foundation/foundation.min.js"></script>
-	-->
+<script src="/js/main.js"></script>
 
-  <!--
-  <script src="javascripts/foundation/foundation.abide.js"></script>
-	<script src="javascripts/foundation/foundation.alerts.js"></script>
-	<script src="javascripts/foundation/foundation.clearing.js"></script>
-	<script src="javascripts/foundation/foundation.cookie.js"></script>
-	<script src="javascripts/foundation/foundation.dropdown.js"></script>
-	<script src="javascripts/foundation/foundation.forms.js"></script>
-	<script src="javascripts/foundation/foundation.interchange.js"></script>
-	<script src="javascripts/foundation/foundation.joyride.js"></script>
-	<script src="javascripts/foundation/foundation.magellan.js"></script>
-	<script src="javascripts/foundation/foundation.orbit.js"></script>
-	<script src="javascripts/foundation/foundation.placeholder.js"></script>
-	<script src="javascripts/foundation/foundation.reveal.js"></script>
-	<script src="javascripts/foundation/foundation.section.js"></script>
-	<script src="javascripts/foundation/foundation.tooltips.js"></script>
-	<script src="javascripts/foundation/foundation.topbar.js"></script>
-  -->
-  <script src="javascripts/main.js"></script>
-
-  <script>
-    $(document).foundation();
-  </script>
-
-  <!-- Google Analytics -->
+<!-- Google Analytics -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-27444689-2']);

@@ -568,14 +568,11 @@ header {
 
 /* -- Main Navigation -- */
 .menu {
-  color: #b3b3b3;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.3em;
   position: absolute;
-  top: 2.5em;
+  top: 2.3em;
   right: 1em; }
-  .menu:hover {
-    color: #1a1a1a; }
   @media screen and (min-width: 37em) {
     .menu {
       display: none; } }

@@ -36,16 +36,11 @@ header {
 
 /* -- Main Navigation -- */
 .menu {
-  color: lighten(#000, 70%);
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.3em;
   position: absolute;
-  top: 2.5em;
+  top: 2.3em;
   right: 1em;
-
-  &:hover {
-    color: lighten(black, 10%);
-  }
 
   @media screen and (min-width: $break-medium + 1em) {
     display: none;

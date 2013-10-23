@@ -9,7 +9,11 @@ I listen to a ton of podcasts, and recently I tried listening at 1.5x speed. At 
 
 Eventually, I bumped it up to 2x (although there are some podcasts that I keep at a lower speed like 1.6x). I see only benefits in doing this. 
 
+###Save a ton of time
+
 Consider a normal 1-hour long web design podcast (like [ShopTalk Show](http://shoptalkshow.com/)). You literally gain a half hour of your life back every episode ShopTalk has over 80 episodes, so if you listen to every episode, you would gain more than an entire work week back. That is insane.
+
+###Some app options
 
 I use an app called [Pocket Casts](http://www.shiftyjelly.com/pocketcasts) for my podcasts. It's beautiful, functional, and available on iOS and Android. I like it because each podcast can have a specific speed saved.
 

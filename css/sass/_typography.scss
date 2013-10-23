@@ -3,13 +3,13 @@
 body {
     color: $body-font-color;
     font-family: $body-font-family;
-    font-size: $base-font-size * .8;
+    font-size: $base-font-size * .83;
     font-style: $body-font-style;
     font-weight: $body-font-weight;
     line-height: $base-line-height;
 
     @media screen and (min-width: $break-small) {
-      font-size: $base-font-size *.85;
+      font-size: $base-font-size *.87;
     }
 
     @media screen and (min-width: $break-medium) {
@@ -36,10 +36,12 @@ h1 {
 
 h2 {
     font-size: $h2-font-size;
+    margin-bottom: .15em;
 }
 
 h3 {
     font-size: $h3-font-size;
+    margin-bottom: .15em;
 }
 
 h4 {
@@ -55,9 +57,40 @@ h6 {
 }
 
 p {
-    font-size: $paragraph-font-size;
+    font-size: $paragraph-font-size * 1.2;
     font-weight: $paragraph-font-weight;
     line-height: $paragraph-line-height;
     margin-bottom: $paragraph-margin-bottom;
     margin-top: 0;
+
+    @media screen and (min-width: $break-small) {
+      font-size: $paragraph-font-size * 1.1;
+    }
+
+    @media screen and (min-width: $break-medium) {
+      font-size: $paragraph-font-size;
+    }
+
+}
+
+b,
+strong {
+    font-weight: 400;
+}
+
+pre {
+  background: rgba(#fbfbfb, 0.1);
+  border: 1px solid #d8d8d8;
+  border-radius: 0.4em;
+  color: lighten($body-font-color, 10%);
+  font-size: 1.1em;
+  line-height: 1.5;
+  overflow: hidden;
+  margin-bottom: 2.1em;
+  padding: 1em 0.8em;
+
+  @media screen and (min-width: $break-medium) {
+    font-size: 1em;
+  }
+
 }

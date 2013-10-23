@@ -19,7 +19,7 @@
       <img src="/img/logo.png" alt="KW Logo">
     </a>
     <a class="menu">Menu</a>
-    <nav>
+    <nav class="main-nav">
       <div name="work"><a href="/index.html">Work</a></div>
       <div name="blog"><a href="/blog/index.html">Blog</a></div>
       <div name="about"><a href="/about.html">About</a></div>
@@ -30,11 +30,13 @@
 <article class="blog-post">
   <section>
     <h1>Creating Aliases in Terminal (Mac)</h1>
-    <h5 class="date">Posted October 17 2013</h5>
+    <h5 class="date">October, 17 2013</h5>
   </section>
   <section>
     
 <p>Navigating to specific folders from the command line is tedious. Luckily, there is a simple way to create your own custom shortcuts to specific folders. They are called aliases.</p>
+
+<h3 id="open_terminal">Open Terminal</h3>
 
 <p>First, open up the Terminal app, located at Applciations &gt; Utilities &gt; Terminal.</p>
 
@@ -45,16 +47,22 @@
 </code></pre></div>
 <p><em>nano is a text editor that is built in to Terminal. There are a few others, but nano is simple and will do the trick.</em></p>
 
+<h3 id="add_your_first_alias">Add your first alias</h3>
+
 <p>Add your alias by typing:</p>
 <div class='highlight'><pre><code class='bash'><span class='nb'>alias </span><span class='nv'>myproject</span><span class='o'>=</span><span class='s1'>&#39;cd ~/path/to/myproject&#39;</span>
 </code></pre></div>
-<p>Exit with control+x, then Y, then return. Now you’ve added an alias to .bash_profile, but we can’t use it until we refresh the file. In Terminal, type</p>
+<p>Exit with control+x, then Y, then return. Now you’ve added an alias to <strong>.bash_profile</strong>, but we can’t use it until we refresh the file. In Terminal, type</p>
 <div class='highlight'><pre><code class='bash'><span class='nb'>source</span> .bash_profile
 </code></pre></div>
 <p>Now, when you type</p>
 <div class='highlight'><pre><code class='bash'>myproject
 </code></pre></div>
-<p>and hit return, you instantly navigate to the folder. Aliases aren’t limited to folders. Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.</p>
+<p>and hit return, you instantly navigate to the folder. Aliases aren’t limited to folders.</p>
+
+<h3 id="doing_more_with_aliases">Doing more with aliases</h3>
+
+<p>Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.</p>
 
 <p>So you could create</p>
 <div class='highlight'><pre><code class='bash'><span class='nb'>alias </span><span class='nv'>aliases</span><span class='o'>=</span><span class='s1'>&#39;nano .bash_profile&#39;</span>
@@ -84,7 +92,7 @@
   
   
   
-    <a class="next" href="/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html">Next &rarr;</a>
+    <a class="next" href="/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html">Newer &rarr;</a>
   
 </section>
 

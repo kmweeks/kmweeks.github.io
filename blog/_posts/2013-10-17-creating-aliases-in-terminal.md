@@ -7,6 +7,7 @@ teaser: Speed up Terminal with shortcuts.
 
 Navigating to specific folders from the command line is tedious. Luckily, there is a simple way to create your own custom shortcuts to specific folders. They are called aliases.
 
+###Open Terminal
 First, open up the Terminal app, located at Applciations > Utilities > Terminal.
 
 <img class="frame" src="/img/terminal-alias.png">
@@ -19,13 +20,15 @@ nano .bash_profile
 
 *nano is a text editor that is built in to Terminal. There are a few others, but nano is simple and will do the trick.*
 
+###Add your first alias
+
 Add your alias by typing:
 
 {% highlight bash %}
 alias myproject='cd ~/path/to/myproject'
 {% endhighlight %}
 
-Exit with control+x, then Y, then return. Now you've added an alias to .bash_profile, but we can't use it until we refresh the file. In Terminal, type
+Exit with control+x, then Y, then return. Now you've added an alias to **.bash_profile**, but we can't use it until we refresh the file. In Terminal, type
 
 {% highlight bash %}
 source .bash_profile
@@ -37,7 +40,11 @@ Now, when you type
 myproject
 {% endhighlight %}
 
-and hit return, you instantly navigate to the folder. Aliases aren't limited to folders. Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.
+and hit return, you instantly navigate to the folder. Aliases aren't limited to folders. 
+
+###Doing more with aliases
+
+Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.
 
 So you could create
 

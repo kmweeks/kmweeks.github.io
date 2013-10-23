@@ -675,6 +675,13 @@ body {
   }
 }
 
+/* line 100, sass/_layout.scss */
+
+.row {
+  overflow: hidden;
+  zoom: 1;
+}
+
 /* ---- TYPOGRAPHY ---- */
 
 /* line 3, sass/_typography.scss */
@@ -1047,6 +1054,29 @@ pre {
 .next {
   float: right;
   padding-right: 0;
+}
+
+/* ---- Footer ---- */
+
+/* line 175, sass/_modules.scss */
+
+footer {
+  text-align: center;
+}
+
+/* line 179, sass/_modules.scss */
+
+footer ul {
+  font-size: 1.2em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* line 185, sass/_modules.scss */
+
+footer li {
+  display: inline;
+  padding: 0 1em;
 }
 
 /* line 1, sass/_theme.scss */

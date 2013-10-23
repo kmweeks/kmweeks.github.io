@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kevin Weeks | Web Designer and Front-End Developer</title>
+    <description></description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Listen to Podcasts at 2x Speed</title>
+        <description>
+&lt;p&gt;I listen to a ton of podcasts, and recently I tried listening at 1.5x speed. At first, it was a little weird. I definitely noticed the increase in speed, and the voices sounded slightly higher pitch, but after about a minute, it seemed like my brain adjusted. The increased speed started sounding normal.&lt;/p&gt;
+
+&lt;p&gt;Eventually, I bumped it up to 2x (although there are some podcasts that I keep at a lower speed like 1.6x). I see only benefits in doing this.&lt;/p&gt;
+
+&lt;h3 id=&quot;save_a_ton_of_time&quot;&gt;Save a ton of time&lt;/h3&gt;
+
+&lt;p&gt;Consider a normal 1-hour long web design podcast (like &lt;a href=&quot;http://shoptalkshow.com/&quot;&gt;ShopTalk Show&lt;/a&gt;). You literally gain a half hour of your life back every episode ShopTalk has over 80 episodes, so if you listen to every episode, you would gain more than an entire work week back. That is insane.&lt;/p&gt;
+
+&lt;h3 id=&quot;some_app_options&quot;&gt;Some app options&lt;/h3&gt;
+
+&lt;p&gt;I use an app called &lt;a href=&quot;http://www.shiftyjelly.com/pocketcasts&quot;&gt;Pocket Casts&lt;/a&gt; for my podcasts. It’s beautiful, functional, and available on iOS and Android. I like it because each podcast can have a specific speed saved.&lt;/p&gt;
+
+&lt;p&gt;It’s $3.99, so if you are opposed to paying for the app, I used to use &lt;a href=&quot;https://play.google.com/store/apps/details?id=de.danoeh.antennapod&quot;&gt;AntennaPod&lt;/a&gt;. It’s opens source and free, but you need to add a &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.falconware.prestissimo&amp;hl=en&quot;&gt;plugin&lt;/a&gt; to allow variable speed playback.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I think PocketCasts is well-worth $4, but that is up to you.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Oct 2013 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html</guid>
+      </item>
+    
+      <item>
+        <title>Creating Aliases in Terminal (Mac)</title>
+        <description>
+&lt;p&gt;Navigating to specific folders from the command line is tedious. Luckily, there is a simple way to create your own custom shortcuts to specific folders. They are called aliases.&lt;/p&gt;
+
+&lt;h3 id=&quot;open_terminal&quot;&gt;Open Terminal&lt;/h3&gt;
+
+&lt;p&gt;First, open up the Terminal app, located at Applciations &amp;gt; Utilities &amp;gt; Terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/terminal-alias.png&#39; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, you need to open .bash_profile and add your aliases. .bash_profile runs every time you open Terminal, so adding aliases to this file will let you use them any time you open Terminal.&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;nano .bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;nano is a text editor that is built in to Terminal. There are a few others, but nano is simple and will do the trick.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;add_your_first_alias&quot;&gt;Add your first alias&lt;/h3&gt;
+
+&lt;p&gt;Add your alias by typing:&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;myproject&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;cd ~/path/to/myproject&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Exit with control+x, then Y, then return. Now you’ve added an alias to &lt;strong&gt;.bash_profile&lt;/strong&gt;, but we can’t use it until we refresh the file. In Terminal, type&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;source&lt;/span&gt; .bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, when you type&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;myproject
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and hit return, you instantly navigate to the folder. Aliases aren’t limited to folders.&lt;/p&gt;
+
+&lt;h3 id=&quot;doing_more_with_aliases&quot;&gt;Doing more with aliases&lt;/h3&gt;
+
+&lt;p&gt;Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.&lt;/p&gt;
+
+&lt;p&gt;So you could create&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;aliases&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;nano .bash_profile&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;gs&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;git status&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Thu, 17 Oct 2013 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/blog/2013/10/17/creating-aliases-in-terminal.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2013/10/17/creating-aliases-in-terminal.html</guid>
+      </item>
+    
+  </channel>
+</rss>

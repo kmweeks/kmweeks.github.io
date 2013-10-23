@@ -849,7 +849,7 @@ pre {
 .main-nav {
   display: none;
   overflow: hidden;
-  text-align: center;
+  text-align: justify;
 }
 
 /* line 19, sass/_modules.scss */
@@ -864,7 +864,7 @@ pre {
   color: #333333;
   display: inline-block;
   font-size: 1.4em;
-  padding: .65em 1.15em;
+  padding: .65em 1em 0;
   text-align: center;
   text-decoration: none;
 }
@@ -875,15 +875,32 @@ pre {
   color: #999999;
 }
 
+/* line 36, sass/_modules.scss */
+
+.main-nav:after {
+  content: "";
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+@media screen and (min-width: 31em) {
+  /* line 45, sass/_modules.scss */
+
+  .main-nav {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 37em) {
-  /* line 39, sass/_modules.scss */
+  /* line 51, sass/_modules.scss */
 
   .main-nav {
     display: block;
     float: right;
   }
 
-  /* line 43, sass/_modules.scss */
+  /* line 55, sass/_modules.scss */
 
   .main-nav a {
     border-bottom: .1875em solid transparent;
@@ -892,32 +909,7 @@ pre {
     padding: 2.2em 1.25em 1em;
   }
 
-  /* line 49, sass/_modules.scss */
-
-  .main-nav a:hover {
-    border-bottom: 0.1875em solid #31a9d8;
-    color: #333333;
-  }
-}
-
-@media screen and (min-width: 37em) {
-  /* line 58, sass/_modules.scss */
-
-  .main-nav {
-    display: block;
-    float: right;
-  }
-
-  /* line 62, sass/_modules.scss */
-
-  .main-nav a {
-    border-bottom: .1875em solid transparent;
-    display: block;
-    padding: 2.2em 1.5em 1em;
-    text-decoration: none;
-  }
-
-  /* line 68, sass/_modules.scss */
+  /* line 61, sass/_modules.scss */
 
   .main-nav a:hover {
     border-bottom: 0.1875em solid #31a9d8;
@@ -926,7 +918,7 @@ pre {
 }
 
 @media screen and (min-width: 41em) {
-  /* line 78, sass/_modules.scss */
+  /* line 71, sass/_modules.scss */
 
   .main-nav a {
     padding-left: 2em;
@@ -936,7 +928,7 @@ pre {
 
 /* ---- Frame ---- */
 
-/* line 86, sass/_modules.scss */
+/* line 79, sass/_modules.scss */
 
 .frame {
   background-color: #fff;
@@ -951,7 +943,7 @@ pre {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 96, sass/_modules.scss */
+/* line 89, sass/_modules.scss */
 
 .frame img {
   display: block;
@@ -959,7 +951,7 @@ pre {
 
 /* ---- Portrait ---- */
 
-/* line 102, sass/_modules.scss */
+/* line 95, sass/_modules.scss */
 
 .portrait {
   display: block;
@@ -968,7 +960,7 @@ pre {
 }
 
 @media screen and (min-width: 36em) {
-  /* line 102, sass/_modules.scss */
+  /* line 95, sass/_modules.scss */
 
   .portrait {
     max-width: 100%;
@@ -977,7 +969,7 @@ pre {
 
 /* ---- Work Excerpt ---- */
 
-/* line 113, sass/_modules.scss */
+/* line 106, sass/_modules.scss */
 
 .work-excerpt__title {
   color: #888;
@@ -986,7 +978,7 @@ pre {
 
 /* ---- Post Date ---- */
 
-/* line 119, sass/_modules.scss */
+/* line 112, sass/_modules.scss */
 
 .date {
   color: #555555;
@@ -994,7 +986,7 @@ pre {
 
 /* ---- Blog Post List ---- */
 
-/* line 126, sass/_modules.scss */
+/* line 119, sass/_modules.scss */
 
 .blog-post-list ul {
   margin-top: 3em;
@@ -1002,7 +994,7 @@ pre {
   list-style-type: none;
 }
 
-/* line 132, sass/_modules.scss */
+/* line 125, sass/_modules.scss */
 
 .blog-post-list li {
   border-bottom: 1px solid #d8d8d8;
@@ -1011,13 +1003,13 @@ pre {
   position: relative;
 }
 
-/* line 138, sass/_modules.scss */
+/* line 131, sass/_modules.scss */
 
 .blog-post-list li:last-child {
   border-bottom: none;
 }
 
-/* line 143, sass/_modules.scss */
+/* line 136, sass/_modules.scss */
 
 .blog-post-list h2 {
   margin-bottom: .25em;
@@ -1025,7 +1017,7 @@ pre {
 
 /* ---- Blog Post ---- */
 
-/* line 151, sass/_modules.scss */
+/* line 144, sass/_modules.scss */
 
 .blog-post h5 {
   margin-bottom: 1.5em;
@@ -1033,7 +1025,7 @@ pre {
 
 /* ---- Previous/Next ---- */
 
-/* line 157, sass/_modules.scss */
+/* line 150, sass/_modules.scss */
 
 .previous,
 .next {
@@ -1042,14 +1034,14 @@ pre {
   padding: 1em .625em 0;
 }
 
-/* line 164, sass/_modules.scss */
+/* line 157, sass/_modules.scss */
 
 .previous {
   float: left;
   padding-left: 0;
 }
 
-/* line 169, sass/_modules.scss */
+/* line 162, sass/_modules.scss */
 
 .next {
   float: right;
@@ -1058,25 +1050,52 @@ pre {
 
 /* ---- Footer ---- */
 
-/* line 175, sass/_modules.scss */
+/* line 168, sass/_modules.scss */
 
 footer {
   text-align: center;
 }
 
-/* line 179, sass/_modules.scss */
+/* line 171, sass/_modules.scss */
 
 footer ul {
   font-size: 1.2em;
   list-style-type: none;
+  margin-bottom: 0;
   padding-left: 0;
+  text-align: justify;
 }
 
-/* line 185, sass/_modules.scss */
+@media screen and (min-width: 31em) {
+  /* line 171, sass/_modules.scss */
+
+  footer ul {
+    text-align: center;
+  }
+}
+
+/* line 182, sass/_modules.scss */
+
+footer ul:after {
+  content: "";
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+/* line 189, sass/_modules.scss */
 
 footer li {
-  display: inline;
-  padding: 0 1em;
+  display: inline-block;
+  padding: 0 .25em;
+}
+
+@media screen and (min-width: 31em) {
+  /* line 189, sass/_modules.scss */
+
+  footer li {
+    padding: 0 1.25em;
+  }
 }
 
 /* line 1, sass/_theme.scss */

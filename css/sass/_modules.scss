@@ -1,18 +1,5 @@
 /* -- Main Navigation -- */
-.menu {
-  cursor: pointer;
-  font-size: 1.3em;
-  position: absolute;
-  top: 2.3em;
-  right: 1em;
-
-  @media screen and (min-width: $break-medium + 1em) {
-    display: none;
-  }
-}
-
 .main-nav {
-  display: none;
   overflow: hidden;
   text-align: justify;
 
@@ -38,7 +25,6 @@
     width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
     display: inline-block;
   }
-
 }
 
 @media screen and (min-width: $break-small + 5em) {
@@ -73,6 +59,11 @@
       padding-right: 2em;
     }
   }
+}
+
+/* ---- Intro ---- */
+.intro-subtitle {
+  margin-bottom: 1em;
 }
 
 /* ---- Frame ---- */
@@ -166,6 +157,7 @@
 
 /* ---- Footer ---- */
 footer {
+  margin-top: 3em;
   text-align: center;
 
   ul {

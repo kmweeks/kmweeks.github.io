@@ -34,12 +34,6 @@ header {
   }
 }
 
-/* -- Intro -- */
-.intro .column,
-.intro .columns {
-  margin-bottom: 3em;
-}
-
 /* -- Single Work Item -- */
 .single-work-item {
   h1 {
@@ -147,6 +141,6 @@ header {
   margin-right: auto;
 }
 
-  img.center {
-    display: block;
-  }
+img.center {
+  display: block;
+}

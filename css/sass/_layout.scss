@@ -1,7 +1,15 @@
 body {
   margin: 0 auto;
-  max-width: 75em;
+  max-width: 50em;
   width: 95%;
+
+  @include respond-to(medium) {
+    width: 90%;
+  }
+
+  @include respond-to(large) {
+    width: 80%;
+  }
 }
 
 .block-grid {

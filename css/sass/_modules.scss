@@ -91,6 +91,15 @@
 .work-excerpt__title {
   color: #888;
   text-align: center;
+
+  @media screen and (min-width: $break-small) {
+    font-size: 1.3em;
+  }
+
+  @media screen and (min-width: $break-medium) {
+    font-size: 1.2em;
+  }
+
 }
 
 /* ---- Post Date ---- */

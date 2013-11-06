@@ -1,6 +1,5 @@
 # Require any additional compass plugins here.
 require 'autoprefixer-rails'
-require 'csso'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -10,7 +9,7 @@ images_dir = "images"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
-output_style = :expanded
+output_style = :compressed
 # :expanded, :nested, :compact, or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
@@ -26,10 +25,9 @@ relative_assets = true
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 # Autoprefixer
-# remove Csso.optimize() to stop minification
 on_stylesheet_saved do |file|
   css = File.read(file)
   File.open(file, 'w') do |io|
-    io << Csso.optimize( AutoprefixerRails.compile(css) )
+    io << AutoprefixerRails.compile(css)
   end
 end

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Set up Wordpress Locally with MAMP (Free) | Kevin Weeks | Designer and Front-End Developer</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+  <link href="/css/main.css" rel="stylesheet" type='text/css'>
+
+</head>
+<body>
+  <header class="row">
+    <a href="/" class="site-logo">
+      <img src="/img/logo.png" alt="KW Logo">
+    </a>
+    <nav class="main-nav">
+      <div name="work"><a href="/index.html">Work</a></div>
+      <div name="blog"><a href="/blog/index.html">Blog</a></div>
+      <div name="about"><a href="/about.html">About</a></div>
+      <div name="contact"><a href="/contact.html">Contact</a></div>
+    </nav>
+  </header>
+
+<article class="blog-post row">
+  <section>
+    <h1>Set up Wordpress Locally with MAMP (Free)</h1>
+    <h5 class="date">November, 13 2013</h5>
+  </section>
+  <section>
+    
+<h2 id="step_1">Step 1</h2>
+
+<p>Download <a href="http://wordpress.org/download/">Wordpress</a>. Extract the zip and place the folder wherever you normally work on web sites - something like /User/username/Projects/wordpress</p>
+
+<h2 id="step_2">Step 2</h2>
+
+<p>Download <a href="http://www.mamp.info/en/downloads/">MAMP</a>. MAMP automatically comes with MAMP Pro (a free trial), but we can do everything we need without having to pay for MAMP Pro.</p>
+
+<h2 id="step_3">Step 3</h2>
+
+<p>Open Applications/MAMP/conf/apache/httpd.conf in your text editor of choice.</p>
+
+<p><img class='frame' src='/img/mamp-httpd-conf.png' /></p>
+
+<p>Scroll to the bottom and add a virtual host entry using the proper path to your wordpress folder <strong>(DocumentRoot)</strong> and a url of your choosing <strong>(ServerName)</strong>.</p>
+<div class='highlight'><pre><code class='aconf'><span class='nt'>&lt;VirtualHost</span> <span class='s'>*:80</span><span class='nt'>&gt;</span>
+  <span class='nb'>DocumentRoot</span> <span class='s2'>&quot;/Users/thetallweeks/Projects/wordpress&quot;</span>
+  <span class='nb'>ServerName</span> local.wordpress
+<span class='nt'>&lt;VirtualHost&gt;</span>
+</code></pre></div>
+<p><img class='frame' src='/img/mamp-httpd-conf-virtual-host.png' /></p>
+
+<p>The <strong>:80</strong> in VirtualHost indicates <strong>port 80</strong>. We’ll also set this value in MAMP’s preferences later.</p>
+
+<h2 id="step_4">Step 4</h2>
+
+<p>Add a new entry to your hosts file. Open <strong>Terminal</strong> and type:</p>
+<div class='highlight'><pre><code class='bash'>sudo nano /etc/hosts
+</code></pre></div>
+<p>Go to the bottom of the file and add an entry:</p>
+<div class='highlight'><pre><code class='bash'>127.0.0.1 local.wordpress
+</code></pre></div>
+<p><img class='frame' src='/img/mamp-new-host-entry.png' /></p>
+
+<p>Now open MAMP and go into Preferences. Set the <strong>Apache Port</strong> to 80 (to match the VirtualHost Entry) and click OK.</p>
+
+<p><img class='frame' src='/img/mamp-preferences-port.png' /></p>
+
+<h2 id="step_5">Step 5</h2>
+
+<p>We’re getting close. Now Click <strong>Open Start Page</strong>, then <strong>phpMyAdmin</strong> at the top of the page. It should take you here:</p>
+
+<p><img class='frame' src='/img/mamp-php-myadmin.png' /></p>
+
+<p>Click <strong>databases</strong>, then create a new database. I named mine “wordpress”.</p>
+
+<p><img class='frame' src='/img/mamp-new-database.png' /></p>
+
+<p>In MAMP, click Stop Servers. Wait until both dots turn red, then click Start Servers. This ensures our recent changes take effect.</p>
+
+<h2 id="step_6">Step 6</h2>
+
+<p>Almost done! Now go to http://local.wordpress, or whatever you set as the name for your virtual host entry. Step through the wordpress setup (it is pretty straightforward).</p>
+
+<p><img class='frame' src='/img/mamp-wordpress-config.png' /></p>
+
+<p>Your database name is whatever you called the database in phpMyAdmin. By default, the user name and password for the database are <strong>root</strong> and <strong>root</strong>. Lastly, create your Wordpress admin user.</p>
+
+<p><img class='frame' src='/img/mamp-wordpress-install.png' /></p>
+
+<p>Don’t forget to uncheck “Allow search engines to index this site.” And there you go. You now have Wordpress running on your local machine.</p>
+
+<p>You can even set up other wordpress sites by <strong>creating separate VirtualHost entries</strong> in httpd.conf and /etc/hosts and creating separate databases.</p>
+
+<p>The best part is, you did it all for free!</p>
+
+  </section>
+</article>
+<section class="row">
+  
+    
+      
+      
+    
+  
+    
+  
+    
+  
+  
+    
+    
+  
+    
+      
+    
+    
+  
+    
+    
+  
+  
+    <a class="previous" href="/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html">&larr; Older</a>
+  
+  
+</section>
+
+<footer class="row">
+  <p>Copyright &copy; 2013</p>
+  <ul>
+    <li><a href="/index.html">Work</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="mailto:kevinmichaelweeks@gmail.com">Contact</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
+  </ul>
+</footer>
+
+<!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27444689-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>

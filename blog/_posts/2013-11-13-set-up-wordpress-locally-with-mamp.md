@@ -6,7 +6,7 @@ teaser: Run WordPress locally using MAMP
 ---
 
 ##Step 1
-Download [Word{ress](http://wordpress.org/download/). Extract the zip and place the folder wherever you normally work on web sites - something like /User/username/Projects/wordpress
+Download [WordPress](http://wordpress.org/download/). Extract the zip and place the folder wherever you normally work on web sites - something like /User/username/Projects/wordpress
 
 ##Step 2
 Download [MAMP](http://www.mamp.info/en/downloads/). MAMP automatically comes with MAMP Pro (a free trial), but we can do everything we need without having to pay for MAMP Pro.

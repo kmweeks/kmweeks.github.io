@@ -17,7 +17,12 @@ task :dev => :clean do
 end
 
 def cleanup
-  sh 'rm -rf _site'
+  case %x{ver}
+    when /Microsoft Windows/
+      sh 'rmdir /S /Q _site'
+    else
+      sh 'rm -rf _site'
+  end
 end
 
 def jekyll(opts = '')
@@ -29,5 +34,5 @@ def compass(opts = '')
 end
 
 def jekyll_compass
-  sh 'compass watch & jekyll serve --watch'
+  sh 'jekyll serve --watch & compass watch'
 end

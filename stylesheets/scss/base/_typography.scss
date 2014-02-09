@@ -1,0 +1,63 @@
+/* ---- TYPOGRAPHY ---- */
+
+body {
+    color: $body-font-color;
+    font-family: $font-family-1;
+    font-size: $base-font-size;
+    font-style: $body-font-style;
+    font-weight: $body-font-weight;
+    line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-2;
+    font-weight: $header-font-weight;
+    font-style: $header-font-style;
+    color: $header-font-color;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: 1.25em;
+  margin: .8em 0 .35em;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: 1.3em;
+  margin: 1em 0 .44em;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: 1.35em;
+  margin: 1.2em 0 .525em;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  line-height: 1.4em;
+  margin: 1.37em 0 .6em;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  line-height: 1.45em;
+  margin: 1.6em 0 .7em;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  line-height: 1.5em;
+  margin: 1.92em 0 .84em;
+}
+
+p {
+    font-size: $paragraph-font-size;
+    font-weight: $paragraph-font-weight;
+    line-height: $paragraph-line-height;
+    margin-top: $paragraph-margin-top;
+    margin-bottom: $paragraph-margin-bottom;
+    margin-top: 0;
+}

@@ -3,6 +3,7 @@ layout: post
 date: 2013-10-19
 title: Listen to Podcasts at 2x Speed
 teaser: Because you value your time
+tags: lifehack
 ---
 
 I listen to a ton of podcasts, and recently I tried listening at 1.5x speed. At first, it was a little weird. I definitely noticed the increase in speed, and the voices sounded slightly higher pitch, but after about a minute, it seemed like my brain adjusted. The increased speed started sounding normal.

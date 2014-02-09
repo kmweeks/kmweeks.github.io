@@ -1,23 +1,17 @@
 ---
-title: Work
+title: Kevin Weeks | Web Designer and Front-End Developer
 ---
 
 {% include header.html %}
 
-  <section class="intro">
-    <h1 class="intro-title">Hi there. My name is Kevin. I'm a web designer and front-end developer.</h1>
-    <h2 class="intro-subtitle">You can see my work below.</h2>
-  </section>
-
-  <section class="block-grid">
-    {% for post in site.categories.work %}
-      <article class="work-excerpt">
-        <a href="{{ post.url }}" class="frame">
-          <img src="{{ post.image }}">
-        </a>
-        <h5 class="work-excerpt__title">{{ post.title }}</h5>
-      </article>
-    {% endfor %}
-  </section>
+<ul class="post-list">
+  {% for post in site.categories.blog %}
+    <li class="post-list__item">
+      <h2 class="post-list__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h5 class="post-list__date">{{ post.date | date: "%B, %-d %Y" }}</h5>
+      <p>{{ post.teaser }}</p>
+    </li>
+  {% endfor %}
+</ul>
 
 {% include footer.html %}

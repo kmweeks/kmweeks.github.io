@@ -1,0 +1,13 @@
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+.post a {
+  text-decoration: underline;
+}

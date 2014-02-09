@@ -1,0 +1,21 @@
+/* ---- Previous/Next ---- */
+.previous-next {
+  @include cf;
+}
+
+.previous,
+.next {
+  font-size: 1.3em;
+  margin-bottom: 2.5em;
+  padding: 1em .625em 0;
+}
+
+.previous {
+  float: left;
+  padding-left: 0;
+}
+
+.next {
+  float: right;
+  padding-right: 0;
+}

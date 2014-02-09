@@ -1,0 +1,70 @@
+$menu-width: 16.25em;
+
+.menu {
+  background: $menu-color;
+  color: #cacaca;
+  font-family: $font-family-1;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  width: $menu-width;
+  padding: 1.25em;
+  overflow-y: auto;
+  visibility: hidden;
+  z-index: 100;
+
+  /* Animation */
+  transition: 0.4s;
+  transform: translateX(-$menu-width);
+}
+
+.menu__item {
+  line-height: 2;
+  margin-left: .1em;
+}
+
+.menu__search {
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.menu__search__input {
+  width: 100%;
+  background-color: #444;
+  border: 1px solid #222;
+  padding: 0 2em 0 .5em;
+  outline: none;
+  height: 2em;
+  color: #AAA;
+
+  &:focus {
+    border-color: #505050;
+  }
+
+}
+
+.menu__search__icon {
+  fill: #AAA;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: .5em;
+  width: 1em;
+  height: 1em;
+}
+
+.menu__link {
+  color: inherit;
+  font-size: 1.2em;
+  text-decoration: none;
+
+  &:hover {
+    color: #f5f5f5;
+  }
+}
+
+/* -- State -- */
+.menu-open #menu {
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 0.4s;
+}

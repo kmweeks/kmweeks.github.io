@@ -1,0 +1,22 @@
+body {
+  @include cf;
+}
+
+.page {
+
+  /* Animation */
+  transition: transform 0.4s;
+
+}
+
+.content {
+  margin: 0 auto;
+  max-width: $page-width;
+  width: 90%;
+}
+
+/* Slide In Menu */
+.menu-open #page {
+  transform: translateX($menu-width);
+  overflow: hidden;
+}

@@ -1,0 +1,51 @@
+/* Width */
+$page-width: 43.75em;
+$menu-width: 16.25em;
+
+// Various global styles
+$base-font-size: 100% !default;
+$base-line-height: 150%;
+
+// Fonts
+$font-family-1: "Source Sans Pro", "Lucida Grande", sans-serif;
+$font-family-2: "Roboto Slab", "Source Sans Pro", sans-serif;
+$font-family-3: "Inconsolata", "Consolas", "Monaco", monospace;
+
+// Body font
+$body-font-color: #222;
+$body-font-weight: 300;
+$body-font-style: normal;
+
+// Colors
+$primary-color: #31A9D8;
+$logo-color: #3A3A3A;
+$menu-color: #222;
+
+/* Breakpoints */
+$break-small: 26.25em;
+$break-medium: 48em;
+$break-large: 64em;
+
+// Header font styles
+$header-font-weight: 900;
+$header-font-style: normal;
+$header-font-color: #333;
+
+// Control header font sizes
+$h1-font-size: 2.1em;
+$h2-font-size: 1.6em;
+$h3-font-size: 1.3em;
+$h4-font-size: 1.1em;
+$h5-font-size: .9em;
+$h6-font-size: .7em;
+
+// Paragraphs
+$paragraph-font-weight: 400;
+$paragraph-font-size: 1em;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: 1em;
+$paragraph-margin-top: 1em;
+
+// Grids
+$block-grid-gutter: .625em;
+$column-gutter: 2em;

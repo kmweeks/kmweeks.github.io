@@ -1,0 +1,11 @@
+.content {
+
+  @media screen and (min-width: $break-small) {
+    font-size: 108%;
+  }
+
+  @media screen and (min-width: $break-medium) {
+    font-size: 114%;
+  }
+
+}

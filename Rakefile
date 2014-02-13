@@ -1,3 +1,6 @@
+require 'rbconfig'
+include RbConfig
+
 task :default => :dev
 
 desc 'Clean up generated site'
@@ -5,27 +8,24 @@ task :clean do
   cleanup
 end
 
-task :build do
-  system('mkdir -p build; ls *.rb | while read file; do cat $file; echo ""; done > build/jekyll_lunr_js_search.rb')
-end
-
-# desc 'Build site with Jekyll'
-# task :build => :clean do
-#   compass
-#   jekyll('build')
-# end
-
 desc 'Start server with --auto'
 task :dev => :clean do
   jekyll_compass
 end
 
+# Check for Windows vs OSX
 def cleanup
-  case %x{ver}
-    when /Microsoft Windows/
+  case CONFIG['host_os']
+    when /mswin|windows/i
       sh 'rmdir /S /Q _site'
-    else
+    when /linux|arch/i
+      # Linux
+    when /sunos|solaris/i
+      # Solaris
+    when /darwin|mac os/i
       sh 'rm -rf _site'
+    else
+      # whatever
   end
 end
 

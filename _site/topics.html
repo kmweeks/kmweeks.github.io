@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Search | Kevin Weeks | Web Designer and Front-End Developer | Kevin Weeks | Designer and Front-End Developer</title>
+  <title>Topics | Kevin Weeks | Designer and Front-End Developer</title>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -43,7 +43,13 @@
     </div>
 
     <div class="menu__item" name="blog">
-      <a class="menu__link" href="/index.html">Home</a>
+      <a class="menu__link" href="/index.html">Writings</a>
+    </div>
+    <div class="menu__item" name="blog">
+      <a class="menu__link" href="/topics.html">Topics</a>
+    </div>
+    <div class="menu__item" name="blog">
+      <a class="menu__link" href="/side-projects.html">Side Projects</a>
     </div>
     <div class="menu__item" name="about">
       <a class="menu__link" href="/about.html">About</a>
@@ -68,46 +74,66 @@
           </svg>
       </header>
 
-<div id="search">
-  <form action="/search" method="get">
-    <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">
-  </form>
+<!--
+  Courtesy http://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html
+-->
+
+
+
+
+
+<div id="tags">
+ <h1>Topics</h1>
+ <ul class="tag-box inline">
+ 
+   
+   <li><a href="#command+line">command line <span>1</span></a></li>
+ 
+   
+   <li><a href="#lifehack">lifehack <span>1</span></a></li>
+ 
+   
+   <li><a href="#localhost">localhost <span>1</span></a></li>
+ 
+   
+   <li><a href="#wordpress">wordpress <span>1</span></a></li>
+ 
+ </ul>
+
+ 
+   
+ <h2 id="command+line">command line</h2>
+ <ul class="posts">
+   
+   <li itemscope><span class="entry-date"><time datetime="2013-10-17T00:00:00-07:00" itemprop="datePublished">October 17, 2013</time></span> &raquo; <a href="/blog/2013/10/17/creating-aliases-in-terminal.html">Creating Aliases in Terminal (Mac)</a></li>
+   
+ </ul>
+ 
+   
+ <h2 id="lifehack">lifehack</h2>
+ <ul class="posts">
+   
+   <li itemscope><span class="entry-date"><time datetime="2013-10-19T00:00:00-07:00" itemprop="datePublished">October 19, 2013</time></span> &raquo; <a href="/blog/2013/10/19/listen-to-podcasts-at-2x-speed.html">Listen to Podcasts at 2x Speed</a></li>
+   
+ </ul>
+ 
+   
+ <h2 id="localhost">localhost</h2>
+ <ul class="posts">
+   
+   <li itemscope><span class="entry-date"><time datetime="2013-11-13T00:00:00-08:00" itemprop="datePublished">November 13, 2013</time></span> &raquo; <a href="/blog/2013/11/13/set-up-wordpress-locally-with-mamp.html">Set up WordPress Locally with MAMP (Free)</a></li>
+   
+ </ul>
+ 
+   
+ <h2 id="wordpress">wordpress</h2>
+ <ul class="posts">
+   
+   <li itemscope><span class="entry-date"><time datetime="2013-11-13T00:00:00-08:00" itemprop="datePublished">November 13, 2013</time></span> &raquo; <a href="/blog/2013/11/13/set-up-wordpress-locally-with-mamp.html">Set up WordPress Locally with MAMP (Free)</a></li>
+   
+ </ul>
+ 
 </div>
-
-
-  <script id="search-results-template" type="text/mustache">
-    {{#entries}}
-      <article>
-        <h3>
-          {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
-          <a href="{{url}}">{{title}}</a>
-        </h3>
-      </article>
-    {{/entries}}
-  </script>
-
-
-<section id="search-results" style="display: none;">
-  <p>Search results</p>
-  <div class="entries">
-
-  </div>
-</section>
-
-<div class="rss">
-  <a class="rss__link" href="/feed.xml">
-    <svg class="rss__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
-      <path d="M136.294 750.93c-75.196 0-136.292 61.334-136.292 136.076 0 75.154 61.1 135.802 136.292 135.802 75.466 0 136.494-60.648 136.494-135.802-0.002-74.742-61.024-136.076-136.494-136.076zM0.156 347.93v196.258c127.784 0 247.958 49.972 338.458 140.512 90.384 90.318 140.282 211.036 140.282 339.3h197.122c-0.002-372.82-303.282-676.070-675.862-676.070zM0.388 0v196.356c455.782 0 826.756 371.334 826.756 827.644h196.856c0-564.47-459.254-1024-1023.612-1024z" />
-    </svg>
-  </a>
-</div>
-
-<script src="/js/vendor/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/lunr.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/mustache.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/date.format.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/URI.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/vendor/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="/js/main.js"></script>
 

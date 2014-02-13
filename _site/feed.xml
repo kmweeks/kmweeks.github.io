@@ -22,15 +22,15 @@
 
 &lt;p&gt;Uncomment the line that says:&lt;/p&gt;
 &lt;pre&gt;Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf&lt;/pre&gt;
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-httpd-conf.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-httpd-conf.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now open httpd-vhosts.conf and add a virtual host entry using the proper path to your WordPress folder &lt;strong&gt;(DocumentRoot)&lt;/strong&gt; and a url of your choosing &lt;strong&gt;(ServerName)&lt;/strong&gt;. The file includes some example entries to use as a guide.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='aconf'&gt;&lt;span class='nt'&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class='s'&gt;*:80&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class='nb'&gt;DocumentRoot&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;/Users/kevinweeks/Projects/wordpress&amp;quot;&lt;/span&gt;
-  &lt;span class='nb'&gt;ServerName&lt;/span&gt; local.wordpress
-&lt;span class='nt'&gt;&amp;lt;VirtualHost&amp;gt;&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;aconf&#39;&gt;&lt;span class=&#39;nt&#39;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#39;s&#39;&gt;*:80&lt;/span&gt;&lt;span class=&#39;nt&#39;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#39;nb&#39;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#39;s2&#39;&gt;&amp;quot;/Users/kevinweeks/Projects/wordpress&amp;quot;&lt;/span&gt;
+  &lt;span class=&#39;nb&#39;&gt;ServerName&lt;/span&gt; local.wordpress
+&lt;span class=&#39;nt&#39;&gt;&amp;lt;VirtualHost&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-httpd-conf-virtual-host.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-httpd-conf-virtual-host.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;:80&lt;/strong&gt; in VirtualHost indicates &lt;strong&gt;port 80&lt;/strong&gt;. We’ll also set this value in MAMP’s preferences later.&lt;/p&gt;
 
@@ -39,22 +39,22 @@
 &lt;p&gt;Add a new entry to your hosts file. Your hosts file exists whether or not you have MAMP installed, and is used to map hostnames to IP addresses.&lt;/p&gt;
 
 &lt;p&gt;Open &lt;strong&gt;Terminal&lt;/strong&gt; and type:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;sudo nano /etc/hosts
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;sudo nano /etc/hosts
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Go to the bottom of the file and add an entry:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;127.0.0.1 local.wordpress
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;127.0.0.1 local.wordpress
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-new-host-entry.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-new-host-entry.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This says that when you go to local.wordpress in your browser, it should send you to 127.0.0.1 (back to your computer). This just sends us back, but we need MAMP to handle the rest.&lt;/p&gt;
 
 &lt;p&gt;Open MAMP and go into Preferences. Set the &lt;strong&gt;Apache Port&lt;/strong&gt; to 80 (to match the VirtualHost Entry) and click OK.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-preferences-port.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-preferences-port.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If the servers are running, click &lt;strong&gt;Stop Servers&lt;/strong&gt;. You will know the servers are running if the two dots are green instead of red.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-servers-running.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-servers-running.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Click &lt;strong&gt;Start Servers&lt;/strong&gt;. This should launch the start page, but if not, click &lt;strong&gt;Open start page&lt;/strong&gt;.&lt;/p&gt;
 
@@ -62,11 +62,11 @@
 
 &lt;p&gt;When you are on the start page, click &lt;strong&gt;phpMyAdmin&lt;/strong&gt; at the top of the page. On this page, click &lt;strong&gt;databases&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-php-myadmin.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-php-myadmin.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then create a new database by typing in a name and clicking &lt;strong&gt;Create&lt;/strong&gt;. I named mine “wordpress”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-new-database.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-new-database.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In MAMP, click &lt;strong&gt;Stop Servers&lt;/strong&gt;. Wait until both dots turn red, then click &lt;strong&gt;Start Servers&lt;/strong&gt;. This ensures our recent changes take effect.&lt;/p&gt;
 
@@ -74,11 +74,11 @@
 
 &lt;p&gt;Almost done! Now go to http://local.wordpress, or whatever you set as the name for your virtual host entry. Step through the WordPress setup (it is pretty straightforward, but if you get stuck, WordPress has documentation &lt;a href=&quot;http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-wordpress-config.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-wordpress-config.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Your database name is whatever you called the database in phpMyAdmin. By default, the user name and password for the database are &lt;strong&gt;root&lt;/strong&gt; and &lt;strong&gt;root&lt;/strong&gt;. Lastly, create your WordPress admin user.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/mamp-wordpress-install.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/mamp-wordpress-install.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And there you go. You now have WordPress running on your local machine.&lt;/p&gt;
 
@@ -120,23 +120,23 @@
 
 &lt;p&gt;First, open up the Terminal app, located at Applciations &amp;gt; Utilities &amp;gt; Terminal.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class='frame' src='/img/terminal-alias.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#39;frame&#39; src=&#39;/img/terminal-alias.png&#39; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, you need to open .bash_profile and add your aliases. .bash_profile runs every time you open Terminal, so adding aliases to this file will let you use them any time you open Terminal.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;nano .bash_profile
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;nano .bash_profile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;nano is a text editor that is built in to Terminal. There are a few others, but nano is simple and will do the trick.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;add_your_first_alias&quot;&gt;Add your first alias&lt;/h3&gt;
 
 &lt;p&gt;Add your alias by typing:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;alias &lt;/span&gt;&lt;span class='nv'&gt;myproject&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;cd ~/path/to/myproject&amp;#39;&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;myproject&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;cd ~/path/to/myproject&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Exit with control+x, then Y, then return. Now you’ve added an alias to &lt;strong&gt;.bash_profile&lt;/strong&gt;, but we can’t use it until we refresh the file. In Terminal, type&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;source&lt;/span&gt; .bash_profile
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;source&lt;/span&gt; .bash_profile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now, when you type&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;myproject
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;myproject
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;and hit return, you instantly navigate to the folder. Aliases aren’t limited to folders.&lt;/p&gt;
 
@@ -145,10 +145,10 @@
 &lt;p&gt;Whatever you put inside the single quotes is esentially injected into the Terminal window and executed.&lt;/p&gt;
 
 &lt;p&gt;So you could create&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;alias &lt;/span&gt;&lt;span class='nv'&gt;aliases&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;nano .bash_profile&amp;#39;&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;aliases&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;nano .bash_profile&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nb'&gt;alias &lt;/span&gt;&lt;span class='nv'&gt;gs&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;git status&amp;#39;&lt;/span&gt;
+&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;bash&#39;&gt;&lt;span class=&#39;nb&#39;&gt;alias &lt;/span&gt;&lt;span class=&#39;nv&#39;&gt;gs&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;=&lt;/span&gt;&lt;span class=&#39;s1&#39;&gt;&amp;#39;git status&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Thu, 17 Oct 2013 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/blog/2013/10/17/creating-aliases-in-terminal.html</link>

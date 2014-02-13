@@ -3,7 +3,7 @@ layout: post
 date: 2013-10-17
 title: Creating Aliases in Terminal (Mac)
 teaser: Speed up Terminal with shortcuts.
-tags: command line
+tags: [command line]
 ---
 
 Navigating to specific folders from the command line is tedious. Luckily, there is a simple way to create your own custom shortcuts to specific folders. They are called aliases.

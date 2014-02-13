@@ -3,7 +3,7 @@ layout: post
 date: 2013-11-13
 title: Set up WordPress Locally with MAMP (Free)
 teaser: Run WordPress locally using MAMP
-tags: wordpress, localhost
+tags: wordpress localhost
 ---
 
 ##Step 1

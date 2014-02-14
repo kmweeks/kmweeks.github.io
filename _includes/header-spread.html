@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Get In Touch | Kevin Weeks | Designer and Front-End Developer</title>
+  <title>{{ page.title }} | Kevin Weeks | Designer and Front-End Developer</title>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
@@ -28,40 +28,14 @@
   <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
 
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700|Source+Sans+Pro:400,600,400italic|Inconsolata' rel='stylesheet' type='text/css'>
-  <link href="/stylesheets/main.css" rel="stylesheet" type='text/css'>
+  <link href="{{ site.baseurl }}stylesheets/main.css" rel="stylesheet" type='text/css'>
 
 </head>
 <body id="container">
-  <nav class="menu" id="menu">
-  <!--
-  <div class="menu__search" id="search">
-    <input class="menu__search__input" type="text" placeholder="Search" autocomplete="off">
-     <svg class="menu__search__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
-      <path d="M31.738 871.396l242.552-206.294c25.074-22.566 51.89-32.926 73.552-31.926-57.256-67.068-91.842-154.078-91.842-249.176 0-212.078 171.922-384 384-384 212.076 0 384 171.922 384 384 0 212.078-171.922 384-384 384-95.098 0-182.108-34.586-249.176-91.844 1 21.662-9.36 48.478-31.926 73.552l-206.294 242.552c-35.322 39.246-93.022 42.554-128.22 7.356s-31.892-92.898 7.354-128.22zM640 640c141.384 0 256-114.616 256-256s-114.616-256-256-256-256 114.616-256 256 114.614 256 256 256z" />
-    </svg>
-  </div>
-  -->
-  <div class="menu__item" name="blog">
-    <a class="menu__link" href="/index.html">Articles</a>
-  </div>
-  <div class="menu__item" name="blog">
-    <a class="menu__link" href="/topics.html">Topics</a>
-  </div>
-  <!--
-  <div class="menu__item" name="blog">
-    <a class="menu__link" href="/side-projects.html">Side Projects</a>
-  </div>
-  -->
-  <div class="menu__item" name="about">
-    <a class="menu__link" href="/about.html">About</a>
-  </div>
-  <div class="menu__item" name="contact">
-    <a class="menu__link" href="/contact.html">Contact</a>
-  </div>
-</nav>
+  {% include menu.html %}
   <div class="page" id="page">
     <header class="header">
-        <svg class="site-logo" id="menu-trigger" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="site-logo site-logo--spread" id="menu-trigger" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
             <path d="M200,4C91.2,4,3,92.2,3,201s88.2,197,197,197s197-88.2,197-197S308.8,4,200,4z M277,346c-0.667-0.333-1.333-0.667-2-1
               c-16.332-42.996-32.668-86.004-49-129h-1c-15.665,43.996-31.335,88.004-47,132c-0.667-0.333-1.333-0.667-2-1
@@ -73,27 +47,3 @@
               c15.999-41.329,32.001-82.671,48-124c10.333-0.333,20.667-0.667,31-1L277,346z"/>
         </svg>
     </header>
-    <div class="content space-above">
-
-<!-- Main Content -->
-<div class="contact">
-  <p class="contact__text">Need to get in touch? <a href="mailto:thetallweeks@gmail.com">Email me.</a> <span class="light-to-dark">Simple</span> <span>as</span> <span>that.</span></p>
-</div>
-
-</div> <!-- End page -->
-<script src="/js/libs/jquery-2.1.0.min.js"></script>
-<script src="/js/main.js"></script>
-
-<!-- Google Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27444689-2']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</body>
-</html>

@@ -10,28 +10,31 @@ title: Topics
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% capture num_words %}
-  {{ site_tags | split:',' | size }}
+{{ site_tags | split:',' | size }}
 {% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
-<div id="tags">
- <h1>Topics</h1>
- <ul class="tag-box inline">
- {% for item in (0..num_words) %}{% unless forloop.last %}
-   {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-   <li><a href="#{{ this_word | cgi_escape }}">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a></li>
- {% endunless %}{% endfor %}
- </ul>
+<div class="topics-list">
+  <h1>Topics</h1>
+  <div class="topics-list__filter">
+    {% for item in (0..num_words) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+    <a data-topic-filter="true" href="#{{ this_word | replace:' ','_' }}" class="topics-list__filter__item">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a>
+    {% endunless %}{% endfor %}
+  </div>
 
- {% for item in (0..num_words) %}{% unless forloop.last %}
-   {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
- <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
- <ul class="posts">
-   {% for post in site.tags[this_word] %}{% if post.title != null %}
-   <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-   {% endif %}{% endfor %}
- </ul>
- {% endunless %}{% endfor %}
+  {% for item in (0..num_words) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  <ul data-topic="true" class="post-list" id="{{ this_word | replace:' ','_' }}">
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+    <li class="post-list__item">
+      <h2 class="post-list__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h5 class="post-list__date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></h5>
+      <p>{{ post.teaser }}</p>
+    </li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% endunless %}{% endfor %}
 </div>
 
 {% include footer.html %}

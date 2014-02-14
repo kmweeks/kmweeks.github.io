@@ -2,7 +2,17 @@
   cursor: pointer;
   display: block;
   fill: $logo-color;
-  float: left;
-  width: 3.5em;
-  height: 3.5em;
+  position: absolute;
+  left: 1.5em;
+  top: 1.5em;
+  width: 3em;
+  height: 3em;
+}
+
+.site-logo--spread {
+  left: 1em;
+}
+
+.site-logo--light {
+  fill: rgba(255,255,255,.5);
 }

@@ -1,0 +1,48 @@
+.topics-list__filter {
+  margin-top: 1.25rem;
+  font-size: 0;
+}
+
+.topics-list__filter__item {
+  background-color: #f8f8f8;
+  border: 1px solid #f1f1f1;
+  display: inline-block;
+  font-size: 1rem;
+  padding: .2em .7em;
+  margin: 0 .5em .5em 0;
+}
+
+.topics-list__posts {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.topics-list__title {
+  font-size: 1.1em;
+}
+
+.topics-list__date {
+  color: #888;
+  font-family: $font-family-1;
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+/* -- State -- */
+[data-topic-filter].is-current {
+  background-color: darken(#f8f8f8, 3%);
+}
+
+[data-topic] {
+  height: auto;
+  opacity: 1;
+  overflow: hidden;
+  transition: opacity .35s ease-in;
+}
+
+[data-topic].is-hidden {
+  height: 0;
+  opacity: 0;
+  transition: opacity .35s ease-in;
+}

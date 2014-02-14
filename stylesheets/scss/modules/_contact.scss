@@ -1,0 +1,19 @@
+.contact {
+  margin-top: 1.875em;
+}
+.contact__text {
+  font-size: 1.3em;
+
+  @media screen and (min-width: $break-small-medium) {
+    text-align: center;
+  }
+
+}
+
+.light-to-dark {
+  color: lighten($body-font-color, 40%);
+
+  &+ span {
+    color: lighten($body-font-color, 30%);
+  }
+}

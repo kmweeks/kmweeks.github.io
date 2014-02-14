@@ -1,13 +1,12 @@
 /* ---- Previous/Next ---- */
 .previous-next {
-  @include cf;
+  overflow: hidden;
 }
 
 .previous,
 .next {
   font-size: 1.3em;
-  margin-bottom: 2.5em;
-  padding: 1em .625em 0;
+  margin: 2em 0 1em;
 }
 
 .previous {

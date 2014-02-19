@@ -10,6 +10,8 @@ Thumbs.db
 
 # Sass #
 .sass-cache
+
+#Sublime
 *.sublime-project
 *.sublime-workspace
 

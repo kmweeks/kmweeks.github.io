@@ -1,6 +1,4 @@
-/*
-  Grid
-*/
+/* Grid */
 .grid {
   @include cf;
 }
@@ -24,6 +22,10 @@
 
 .grid__column--gutter--large {
   border-right: 2.5em solid transparent;
+}
+
+.small-1of2 {
+  width: 50%;
 }
 
 .small--1of1 {

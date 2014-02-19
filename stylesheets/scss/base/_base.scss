@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+    border-top: .3em solid $primary-color;
+}
+
 body {
   padding-bottom: 3em;
 }

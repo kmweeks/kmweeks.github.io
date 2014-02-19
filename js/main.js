@@ -1,40 +1,35 @@
 // Slide In Menu
 (function () {
-  var $container = document.getElementById('container'),
-      $menuTrigger = document.getElementById('menu-trigger'),
+  var $menuTrigger = document.getElementById('menu-trigger'),
       $menu = document.getElementById('menu'),
-      $page = document.getElementById('page'),
+      $close = document.getElementById('menu-close'),
       revealed = false;
 
-  document.addEventListener('click', function () {
-    close($container);
-  });
+  $menu.classList.add('menu-closed');
 
-  $menuTrigger.addEventListener('click', function (e) {
-
-    e.stopPropagation();
-
+  $menuTrigger.addEventListener('click', function() {
     if (!revealed) {
-      reveal($container);
+      reveal($menu);
     } else {
-      close($container);
+      close($menu);
     }
-
   }, false);
 
-  $menu.addEventListener('click', function (e) {
-    e.stopPropagation();
+  $close.addEventListener('click', function() {
+    close($menu);
   });
 
   // Trigger slideout
   var reveal = function (elem) {
     elem.classList.add('menu-open');
+    elem.classList.remove('menu-closed');
     revealed = true;
   };
 
   // Hide elements
   var close = function (elem) {
     elem.classList.remove('menu-open');
+    elem.classList.add('menu-closed');
     revealed = false;
   };
 

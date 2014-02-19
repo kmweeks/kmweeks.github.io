@@ -9,5 +9,9 @@ a {
 }
 
 .post a {
-  text-decoration: underline;
+  border-bottom: .1em solid rgba(0,0,0,.15);
+
+  &:hover {
+    border-bottom: .1em solid rgba($primary-color, .5);
+  }
 }

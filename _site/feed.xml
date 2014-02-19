@@ -7,6 +7,66 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>How to Create Custom Search Engines in Chrome</title>
+        <description>&lt;p&gt;If you use Chrome, you probably do a lot of Google Searching from the address bar (which Chrome calls the omnibox). What if you want to search just wikipedia? You could type wikipedia, a space, and your search, but there is an easier way.&lt;/p&gt;
+
+&lt;h3 id=&quot;edit_default_search_engines&quot;&gt;Edit default search engines&lt;/h3&gt;
+
+&lt;p&gt;Click on the Settings Icon, then Settings. On the settings page, click the &lt;strong&gt;Manage search engines&lt;/strong&gt; button under &lt;strong&gt;Search&lt;/strong&gt; (&lt;a href=&quot;https://support.google.com/chrome/answer/95653?hl=en&quot;&gt;see here if you need help&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;In the popup, you should see a set of &lt;strong&gt;Default search settings&lt;/strong&gt; that may include Yahoo!, Bing, Ask, and AOL. You may also see some options in &lt;strong&gt;Other search engines&lt;/strong&gt;. Let’s start with something easy to see how this feature works.&lt;/p&gt;
+
+&lt;p&gt;If you want to use bing search, go into the omnibox (address bar) and type bing.com, then space or tab. The omnibox now indicates what search engine you are using with a blue &lt;strong&gt;Search Bing:&lt;/strong&gt; box.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='frame' src='/img/2014/02/search-bing.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Search for something and you will be directed to Bing search results.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='frame' src='/img/2014/02/bing-search-results.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;But it is pretty inefficient to have to type &lt;strong&gt;bing.com&lt;/strong&gt;. wouldn’t it be better to type &lt;strong&gt;bing&lt;/strong&gt;, or just &lt;strong&gt;b&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;h3 id=&quot;change_the_search_keyword&quot;&gt;Change the search keyword&lt;/h3&gt;
+
+&lt;p&gt;Go back to the &lt;strong&gt;Manage Search Engines&lt;/strong&gt; and change the keyword. While we’re at it, let’s change some other keywords and remove the search engines we will never use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='frame' src='/img/2014/02/change-search-keyword.png' /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;adding_custom_search_engine&quot;&gt;Adding custom search engine&lt;/h3&gt;
+
+&lt;p&gt;This takes a little bit of trickery. First, we need to get the url for the search we want to use. As an example, I am going to use &lt;a href=&quot;http://www.canistream.it&quot;&gt;canistream.it&lt;/a&gt;, a free service that searches major content providers like Netflix, Redbox, Amazon, Google Play, Hulu Plus, etc and tells you whether you can stream (rent or buy) a movie or tv show, and how much it costs with each service. I highly recommend it and now, it will be even easier to search!&lt;/p&gt;
+
+&lt;p&gt;Go &lt;a href=&quot;http://www.canistream.it&quot;&gt;www.canistream.it&lt;/a&gt; and search for something. Then look in the address bar and to see how this particular site search works.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='frame' src='/img/2014/02/canistreamit-search.png' /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;get_the_sites_search_url&quot;&gt;Get the site’s search url&lt;/h4&gt;
+
+&lt;p&gt;We can see that the url is &lt;strong&gt;www.canistream.it/search/movie/&lt;/strong&gt;, then the search query. Copy this string. Now go back to &lt;strong&gt;Manage Search Engines&lt;/strong&gt; and scroll to the bottom.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Be warned&lt;/strong&gt;, adding a search engine is very finnicky. If you navigate away while adding one, it will wipe the inputs, so we need to do it all in one clean sweep.&lt;/p&gt;
+
+&lt;p&gt;Add the name of the search engine, the keyword, and the url we just copied. At the end of the url, add &lt;strong&gt;%s&lt;/strong&gt; which is a placeholder for the search query. &lt;strong&gt;Make sure you press Enter to submit the search engine.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class='frame' src='/img/2014/02/creating-a-custom-search.png' /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;search_with_your_custom_engine&quot;&gt;Search with your custom engine&lt;/h4&gt;
+
+&lt;p&gt;Now try searching using your custom search engine. In the omnibox, type your keyword (in this case, canistream.it) and press tab and type in your search. BOOM! Custom search.&lt;/p&gt;
+
+&lt;h3 id=&quot;search_a_site_but_use_googles_search&quot;&gt;Search a site but use Google’s search&lt;/h3&gt;
+
+&lt;p&gt;One other thing we may want to do is search a site but use the standard Google search results page. Let’s say we want to see only &lt;a href=&quot;http://www.stackoverflow.com&quot;&gt;Stack Overflow&lt;/a&gt; answers to questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;{google:baseURL}search?q=site:stackoverflow.com+%s&lt;/strong&gt; Copy this line but replace the section after &lt;strong&gt;site:&lt;/strong&gt; with whatever site you want to search.&lt;/p&gt;
+
+&lt;p&gt;Finally, enjoy your new, amazing search capabilities!&lt;/p&gt;</description>
+        <pubDate>Sat, 15 Feb 2014 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/blog/2014/02/15/quickly-search-your-favorite-sites-with-chrome-custom-search-engines.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2014/02/15/quickly-search-your-favorite-sites-with-chrome-custom-search-engines.html</guid>
+      </item>
+    
+      <item>
         <title>Set up WordPress Locally with MAMP (Free)</title>
         <description>&lt;h2 id=&quot;step_1&quot;&gt;Step 1&lt;/h2&gt;
 

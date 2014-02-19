@@ -8,10 +8,11 @@ a {
   }
 }
 
-.post a {
-  border-bottom: .1em solid rgba(0,0,0,.15);
+.post a,
+.contact a {
+  border-bottom: .08em solid rgba(0,0,0,.15);
 
   &:hover {
-    border-bottom: .1em solid rgba($primary-color, .5);
+    border-bottom: .08em solid rgba($primary-color, .5);
   }
 }

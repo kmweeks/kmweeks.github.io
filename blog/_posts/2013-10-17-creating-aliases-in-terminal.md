@@ -11,7 +11,7 @@ Navigating to specific folders from the command line is tedious. Luckily, there 
 ###Open Terminal
 First, open up the Terminal app, located at Applciations > Utilities > Terminal.
 
-<img class="frame" src="/img/terminal-alias.png">
+<img class="frame" src="/img/2013/10/terminal-alias.png">
 
 Next, you need to open .bash_profile and add your aliases. .bash_profile runs every time you open Terminal, so adding aliases to this file will let you use them any time you open Terminal.
 

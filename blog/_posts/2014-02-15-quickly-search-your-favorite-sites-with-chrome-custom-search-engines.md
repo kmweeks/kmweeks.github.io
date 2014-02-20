@@ -51,6 +51,7 @@ Now try searching using your custom search engine. In the omnibox, type your key
 One other thing we may want to do is search a site but use the standard Google search results page. Let's say we want to see only [Stack Overflow](http://www.stackoverflow.com) answers to questions. 
 
 **{google:baseURL}search?q=site:stackoverflow.com+%s**
+
 Copy this line but replace the section after **site:** with whatever site you want to search.
 
 Finally, enjoy your new, amazing search capabilities!

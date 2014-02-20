@@ -19,7 +19,7 @@ Uncomment the line that says:
 
 <pre>Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</pre>
 
-<img class="frame" src="/img/mamp-httpd-conf.png">
+<img class="frame" src="/img/2013/11/mamp-httpd-conf.png">
 
 Now open httpd-vhosts.conf and add a virtual host entry using the proper path to your WordPress folder **(DocumentRoot)** and a url of your choosing **(ServerName)**. The file includes some example entries to use as a guide.
 
@@ -30,7 +30,7 @@ Now open httpd-vhosts.conf and add a virtual host entry using the proper path to
 <VirtualHost>
 {% endhighlight %}
 
-<img class="frame" src="/img/mamp-httpd-conf-virtual-host.png">
+<img class="frame" src="/img/2013/11/mamp-httpd-conf-virtual-host.png">
 
 The **:80** in VirtualHost indicates **port 80**. We'll also set this value in MAMP's preferences later.
 
@@ -49,39 +49,39 @@ Go to the bottom of the file and add an entry:
 127.0.0.1 local.wordpress
 {% endhighlight %}
 
-<img class="frame" src="/img/mamp-new-host-entry.png">
+<img class="frame" src="/img/2013/11/mamp-new-host-entry.png">
 
 This says that when you go to local.wordpress in your browser, it should send you to 127.0.0.1 (back to your computer). This just sends us back, but we need MAMP to handle the rest.
 
 Open MAMP and go into Preferences. Set the **Apache Port** to 80 (to match the VirtualHost Entry) and click OK.
 
-<img class="frame" src="/img/mamp-preferences-port.png">
+<img class="frame" src="/img/2013/11/mamp-preferences-port.png">
 
 If the servers are running, click **Stop Servers**. You will know the servers are running if the two dots are green instead of red.
 
-<img class="frame" src="/img/mamp-servers-running.png">
+<img class="frame" src="/img/2013/11/mamp-servers-running.png">
 
 Click **Start Servers**. This should launch the start page, but if not, click **Open start page**.
 
 ##Step 5
 When you are on the start page, click **phpMyAdmin** at the top of the page. On this page, click **databases**.
 
-<img class="frame" src="/img/mamp-php-myadmin.png">
+<img class="frame" src="/img/2013/11/mamp-php-myadmin.png">
 
 Then create a new database by typing in a name and clicking **Create**. I named mine "wordpress".
 
-<img class="frame" src="/img/mamp-new-database.png">
+<img class="frame" src="/img/2013/11/mamp-new-database.png">
 
 In MAMP, click **Stop Servers**. Wait until both dots turn red, then click **Start Servers**. This ensures our recent changes take effect.
 
 ##Step 6
 Almost done! Now go to http://local.wordpress, or whatever you set as the name for your virtual host entry. Step through the WordPress setup (it is pretty straightforward, but if you get stuck, WordPress has documentation [here](http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install)). 
 
-<img class="frame" src="/img/mamp-wordpress-config.png">
+<img class="frame" src="/img/2013/11/mamp-wordpress-config.png">
 
 Your database name is whatever you called the database in phpMyAdmin. By default, the user name and password for the database are **root** and **root**. Lastly, create your WordPress admin user. 
 
-<img class="frame" src="/img/mamp-wordpress-install.png">
+<img class="frame" src="/img/2013/11/mamp-wordpress-install.png">
 
 And there you go. You now have WordPress running on your local machine. 
 

@@ -1,5 +1,12 @@
-.spread-image img {
-  width: 100%;
+.avatar-image {
+
+  text-align: center;
+
+  img {
+    max-width: 15em;
+    margin: 0 auto;
+    width: 80%;
+  }
 }
 
 .post img {

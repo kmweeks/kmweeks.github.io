@@ -1,8 +1,9 @@
-// Slide In Menu
+// Pop In Menu
 (function () {
   var $menuTrigger = document.getElementById('menu-trigger'),
       $menu = document.getElementById('menu'),
       $close = document.getElementById('menu-close'),
+      $logo= document.getElementById('site-logo'),
       revealed = false;
 
   $menu.classList.add('menu-closed');
@@ -10,13 +11,17 @@
   $menuTrigger.addEventListener('click', function() {
     if (!revealed) {
       reveal($menu);
+      reveal($logo);
     } else {
+      console.log("Test");
       close($menu);
+      close($logo);
     }
   }, false);
 
   $close.addEventListener('click', function() {
     close($menu);
+    close($logo);
   });
 
   // Trigger slideout
@@ -41,6 +46,8 @@
       $topicFilter = $('[data-topic-filter]');
 
   $topic.addClass('is-hidden');
+  $topic.first().removeClass('is-hidden');
+  $topicFilter.first().addClass('is-current');
 
   $topicFilter.on('click', function(e) {
     e.preventDefault();

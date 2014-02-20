@@ -14,3 +14,12 @@
 .site-logo--light {
   fill: rgba(255,255,255,.5);
 }
+
+/* -- State -- */
+#site-logo.menu-open {
+  cursor: default;
+  fill: #7e7e7e;
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+}

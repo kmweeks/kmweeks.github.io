@@ -2,10 +2,34 @@
   margin-bottom: 2em;
 }
 
-.post__date {
-  color: #888;
+.post__topics {
   font-family: $font-family-1;
   font-size: 1em;
   font-weight: normal;
   margin-top: 0;
+}
+
+.post__topics__label {
+  color: #888;
+}
+
+.post__topic {
+
+  &:after {
+    content: ",";
+  }
+
+  &:last-child {
+    &:after {
+      content: "";
+    }
+  }
+}
+
+.post__date {
+  color: #888;
+  font-family: $font-family-1;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-top: 1em;
 }

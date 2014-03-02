@@ -42,24 +42,41 @@
 
 // Topics List
 (function() {
-  var $topic =  $('[data-topic]'),
+  var hash = window.location.hash,
+      id = "",
+      $topic =  $('[data-topic]'),
       $topicFilter = $('[data-topic-filter]');
 
   $topic.addClass('is-hidden');
-  $topic.first().removeClass('is-hidden');
-  $topicFilter.first().addClass('is-current');
+
+  var setCurrentTopic = function(id) {
+    $topic.addClass('is-hidden');
+    $(id).removeClass('is-hidden');
+    $topicFilter.removeClass('is-current');
+    $(this).addClass('is-current');
+  };
+
+  var setCurrentFilter = function(id) {
+    $current = $('[data-topic-filter][href='+id+']');
+    console.log($current);
+    $current.addClass('is-current');
+  };
+
+  if(hash) {
+    setCurrentTopic(hash);
+    setCurrentFilter(hash);
+  } else {
+    $topic.first().removeClass('is-hidden');
+    $topicFilter.first().addClass('is-current');
+  }
 
   $topicFilter.on('click', function(e) {
     e.preventDefault();
-
-    var id = $(this).attr("href");
+    id = $(this).attr("href");
+    window.location.hash = id;
     id = String(id);
-
-    $topic.addClass('is-hidden');
-    $(id).removeClass('is-hidden');
-
-    $topicFilter.removeClass('is-current');
-    $(this).addClass('is-current');
+    setCurrentTopic(id);
+    setCurrentFilter(id);
   });
 
 })();

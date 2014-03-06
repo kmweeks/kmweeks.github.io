@@ -8,7 +8,7 @@ title: Blog | Kevin Weeks | Web Designer and Front-End Developer
   {% for post in site.categories.blog %}
     <li class="post-list__item">
       <h2 class="post-list__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <h5 class="post-list__date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></h5>
+      <h5 class="post-list__date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %e, %Y" }}</time></h5>
       <p class="post-list__teaser">{{ post.teaser }}</p>
     </li>
   {% endfor %}

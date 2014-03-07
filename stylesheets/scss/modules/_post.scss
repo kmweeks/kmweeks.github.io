@@ -10,7 +10,7 @@
 }
 
 .post__topics__label {
-  color: #888;
+  color: $light-text-color;
 }
 
 .post__topic {
@@ -27,7 +27,7 @@
 }
 
 .post__date {
-  color: #888;
+  color: $light-text-color;
   font-family: $font-family-1;
   font-size: 1.1em;
   font-weight: normal;

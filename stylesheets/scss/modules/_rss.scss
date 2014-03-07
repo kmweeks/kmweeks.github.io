@@ -11,13 +11,13 @@
 
 .rss__icon {
   display: inline-block;
-  fill: #444;
-  width: 1.5em;
-  height: 1.5em;
+  fill: $rss-icon-color;;
+  width: 1em;
+  height: 1em;
   transition: fill .5s ease;
 }
 
 .rss__icon:hover {
-  fill: lighten(#444, 10%);
+  fill: darken($rss-icon-color, 15%);
   transition: fill .5s ease;
 }

@@ -1,4 +1,4 @@
-kmweeks.github.io
+thetallweeks.github.io
 =================
 
 My personal website
